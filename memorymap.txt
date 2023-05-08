@@ -193,7 +193,7 @@ Address         Description
 0x420061        a
 0x420062        j
 0x420063        i
-0x420064        \n
+0x420064        \0
 0x420065        A
 0x420066        +
 0x420067        \s
@@ -211,10 +211,10 @@ Address         Description
 0x420073        d
 0x420074        e
 0x420075        .
-0x420076        \n
+0x420076        %c
 0x420077        \0
-0x420078        addr x0, &gradeStr #0x420065
-0x42007C        bl  #0x420065
+0x420078        addr x0, &gradeStr #0x420065 
+0x42007C        mov x1, '\n'
 0x420080        b printf
 0x420084        \0
 0x420085        \0

