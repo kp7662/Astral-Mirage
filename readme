@@ -61,20 +61,29 @@ None.
 Student 1: What is your assessment of the assignment? Was it helpful?
 Was it fun?
 
-
+I think the assignment was ok. 
 
 ------------------------------------------------------------------------
 Student 2: What is your assessment of the assignment? Was it helpful?
 Was it fun?
 
-
+I think the assignment process was a bit confusing at first since
+I am a bit confused with machine code. However, I learned a lot about
+how hacking into a computer works and I find this project really 
+interesting. 
 
 ------------------------------------------------------------------------
 (optional) What information can you provide about your submission that
 will help your grader to grade it in the most favorable light? In
 particular, what bugs are in your submission?
 
-
+We tried our best to implement createdataAplus.c and managed to output
+the correct string. However, we have problem to output the correct 
+formatting(newline after gradeStr). We tried moving a newline character
+to a register and write to to the file, but we are not sure why it wasn't
+working as intended. We couldn't get debugging help so we hope that you 
+can grade this part in the most favorable light and kindly award us some
+extra credits as we worked hard on this. Thank you very much!
 
 ------------------------------------------------------------------------
 What are your sentences from Step 1?

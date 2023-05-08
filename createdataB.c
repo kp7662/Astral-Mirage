@@ -1,10 +1,16 @@
+/*--------------------------------------------------------------------*/
+/* createdataB.c                                                      */
+/* Author: Kok Wei Pua and Cherie Jiraphanphong                       */
+/*--------------------------------------------------------------------*/
+
 #include <stdio.h>
 
 int main(void) {
 
     int i; 
-    unsigned long ulAddr;
+    unsigned long ulAddr; /* Memory address variable */
     
+    /* Create dataB file */
     FILE *psFile;
     psFile = fopen("dataB", "w");
 

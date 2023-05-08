@@ -36,8 +36,9 @@ unsigned int MiniAssembler_mov(unsigned int uiReg, int iImmed)
 
    /* register to be inserted in instruction */
    setField(uiReg, 0, &uiInstr, 0, 5);
-   
-   setField(iImmed, 0, &uiInstr, 5, 16);
+
+   /* content to be inserted in instruction */
+   setField((unsigned int)iImmed, 0, &uiInstr, 5, 16);
 
    return uiInstr;
 }
@@ -75,6 +76,7 @@ unsigned int MiniAssembler_strb(unsigned int uiFromReg,
    /* Base Instruction Code */
    uiInstr = 0x39000000;
 
+   /* register to be inserted in instruction */
    setField(uiFromReg, 0, &uiInstr, 0, 5);
    setField(uiToReg, 0, &uiInstr, 5, 5);
 
@@ -93,26 +95,10 @@ unsigned int MiniAssembler_b(unsigned long ulAddr,
    /* Base Instruction Code */
    uiInstr = 0x14000000;
 
+   /* Compute relative distance of target and instruction address */
    uiDisp = (unsigned int)(ulAddr - ulAddrOfThisInstr);
 
-   setField(uiDisp, 2, &uiInstr, 0, 26);
-
-   return uiInstr;
-}
-
-/*--------------------------------------------------------------------*/
-
-unsigned int MiniAssembler_bl(unsigned long ulAddr,
-   unsigned long ulAddrOfThisInstr) 
-{
-   unsigned int uiInstr;
-   unsigned int uiDisp;
-
-   /* Base Instruction Code */
-   uiInstr = 0x94000000;
-
-   uiDisp = (unsigned int)(ulAddr - ulAddrOfThisInstr);
-
+   /* address to be inserted into instruction */
    setField(uiDisp, 2, &uiInstr, 0, 26);
 
    return uiInstr;
