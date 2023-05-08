@@ -3,8 +3,8 @@
 /* Author: Kok Wei Pua and Cherie Jiraphanphong                       */
 /*--------------------------------------------------------------------*/
 
-#include <stdio.h>
 #include "miniassembler.h"
+#include <stdio.h>
 
 int main(void) {
 

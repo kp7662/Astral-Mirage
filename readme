@@ -17,8 +17,15 @@ information given in the "Policies" web page (also available on armlab
 in the file ~cos217/AuthorizedSourcesList ) to this section of the
 readme file, and edit it as appropriate.
 
+The course's lectures.
 
+The course's precepts.
 
+The course's website.
+
+The course's current staff members outside of class time through office hours.
+
+Current Intro Lab TAs through visits to the Intro COS Lab.
 
 ------------------------------------------------------------------------
 Student 2: What authorized sources of information did you use to
@@ -27,7 +34,15 @@ information given in the "Policies" web page (also available on armlab
 in the file ~cos217/AuthorizedSourcesList ) to this section of the
 readme file, and edit it as appropriate.
 
+The course's lectures.
 
+The course's precepts.
+
+The course's website.
+
+The course's current staff members outside of class time through office hours.
+
+Current Intro Lab TAs through visits to the Intro COS Lab.
 
 ------------------------------------------------------------------------
 Student 1: What unauthorized sources of information did you use to
@@ -61,7 +76,8 @@ None.
 Student 1: What is your assessment of the assignment? Was it helpful?
 Was it fun?
 
-I think the assignment was ok. 
+I think the assignment was kinda cool. I learned how buffer overrun works 
+"under the hood" and I find it to be interesting. 
 
 ------------------------------------------------------------------------
 Student 2: What is your assessment of the assignment? Was it helpful?
@@ -97,6 +113,6 @@ then you could receive a maximum penalty of 20 years in prison.
 According to 18 U.S. Code 1030, if you were to use a buffer overrun attack
 to commit fraud or related activity in connection with computers, and 
 attempted to cause death or knowingly or recklessly caused death, then you
-could receive a maximum penalty of 20 years in prison.
+could receive a maximum penalty of life in prison.
 
 ------------------------------------------------------------------------
